@@ -19,11 +19,25 @@ jobs:
     executor: exec1
     steps:
       - checkout
-      - run: echo "this is the test job"
+      - run:
+            name: Save test results
+            command: |
+              mkdir -p ~/test-results/junit/
+              find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+            when: always
+              - store_test_results:
+                  path: ~/test-results
 
+  publish:
+    executor: exec1
+    steps:
+      - checkout
+      - run: echo "this is the publish job"
 # Invoke jobs via workflows
 workflows:
   build-and-test-workflow:
     jobs:
       - build
       - test
+          requires:
+            - build
