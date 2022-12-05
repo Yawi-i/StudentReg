@@ -19,6 +19,7 @@ jobs:
   test:
     executor: exec1
     steps:
+      - checkout
       - run:
           name: Test
           command: mvn test
