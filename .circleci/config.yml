@@ -21,7 +21,7 @@ jobs:
     steps:
       - run:
           name: Test
-          command: mvn clean test
+          command: mvn test
           path: target/surefire-reports
       - store_test_results :
           path: target/surefire-reports
