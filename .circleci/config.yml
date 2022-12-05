@@ -26,10 +26,10 @@ jobs:
       - store_test_results :
           path: target/surefire-reports
 
-  publish:
-    executor: exec1
-    steps:
-      -checkout
+#  publish:
+#    executor: exec1
+#    steps:
+#      -checkout
 #     - run:
 #          name: Publish
 #          command:
@@ -42,8 +42,8 @@ workflows:
     jobs:
       - build
       - test
-        #requires:
-      # - build
-      - publish
-        #requires:
-      # - test
+#        requires:
+#       - build
+#      - publish
+#        requires:
+#       - test
