@@ -22,7 +22,7 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: surefire:test
+          command: mvn test
           path: ~/target/surefire-reports
 #      - store_test_results
 
