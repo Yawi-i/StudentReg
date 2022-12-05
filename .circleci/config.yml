@@ -26,7 +26,12 @@ jobs:
     executor: exec1
     steps:
       - checkout
-      - run: echo "this is the publish job"
+      - run:
+          name: Publish
+          command:
+            - docker login
+            -
+
 
 workflows:
   build-and-test-workflow:
@@ -38,3 +43,4 @@ workflows:
       - publish
           #requires:
            # - test
+      #https://www.pluralsight.com/guides/create-docker-images-docker-hub
