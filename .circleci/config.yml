@@ -19,7 +19,6 @@ jobs:
   test:
     executor: exec1
     steps:
-      - checkout
       - run:
           name: Test
           command: mvn clean test
@@ -30,7 +29,6 @@ jobs:
   publish:
     executor: exec1
     steps:
-      - checkout
 #     - run:
 #          name: Publish
 #          command:
