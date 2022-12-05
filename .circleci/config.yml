@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Test
           command: mvn test
-#          path: target/surefire-reports
+          path: ~/target/surefire-reports
       - store_test_results
 
   publish:
