@@ -29,6 +29,7 @@ jobs:
   publish:
     executor: exec1
     steps:
+      -checkout
 #     - run:
 #          name: Publish
 #          command:
