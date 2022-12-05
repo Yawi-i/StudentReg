@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ie.atu.StudentTest" time="0.067" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ie.atu.StudentTest" time="0.068" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Users\yaelm\.jdks\openjdk-19.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\yaelm\AppData\Local\Temp\surefire2082397133722796233\surefirebooter-20221205215707399_3.jar C:\Users\yaelm\AppData\Local\Temp\surefire2082397133722796233 2022-12-05T21-57-06_885-jvmRun1 surefire-20221205215707399_1tmp surefire_0-20221205215707399_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\yaelm\AppData\Local\Temp\surefire13540234220237885913\surefirebooter-20221205221655653_3.jar C:\Users\yaelm\AppData\Local\Temp\surefire13540234220237885913 2022-12-05T22-16-55_288-jvmRun1 surefire-20221205221655653_1tmp surefire_0-20221205221655653_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\yaelm\Desktop\IntelliJ\StudentReg\StudentReg\target\test-classes;C:\Users\yaelm\Desktop\IntelliJ\StudentReg\StudentReg\target\classes;C:\Users\yaelm\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\yaelm\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\yaelm\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\yaelm\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\yaelm\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\yaelm\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\yaelm\AppData\Local\Temp\surefire2082397133722796233\surefirebooter-20221205215707399_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\yaelm\AppData\Local\Temp\surefire13540234220237885913\surefirebooter-20221205221655653_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -64,9 +64,9 @@
   <testcase name="TestPhoneLengthFail" classname="ie.atu.StudentTest" time="0.034"/>
   <testcase name="TestEmailFail" classname="ie.atu.StudentTest" time="0.001"/>
   <testcase name="TestEmailPass" classname="ie.atu.StudentTest" time="0.001"/>
-  <testcase name="TestAgeFail" classname="ie.atu.StudentTest" time="0.001"/>
-  <testcase name="TestAgePass" classname="ie.atu.StudentTest" time="0.002"/>
-  <testcase name="TestNameLengthFail" classname="ie.atu.StudentTest" time="0.002"/>
+  <testcase name="TestAgeFail" classname="ie.atu.StudentTest" time="0.002"/>
+  <testcase name="TestAgePass" classname="ie.atu.StudentTest" time="0.001"/>
+  <testcase name="TestNameLengthFail" classname="ie.atu.StudentTest" time="0.001"/>
   <testcase name="TestPhoneLength" classname="ie.atu.StudentTest" time="0.001"/>
   <testcase name="TestNameLength" classname="ie.atu.StudentTest" time="0.001"/>
 </testsuite>
