@@ -18,19 +18,19 @@ jobs:
     steps:
       - checkout
       - run:
-            name: Test
-            command: mvn test
-            path: target/surefire-reports
+          name: Test
+          command: mvn test
+          path: target/surefire-reports
 
   publish:
     executor: exec1
     steps:
       - checkout
-      - run:
-          name: Publish
-          command:
-            - docker login
-            -
+#     - run:
+#          name: Publish
+#          command:
+#            - docker login
+#            -
 
 
 workflows:
@@ -38,9 +38,9 @@ workflows:
     jobs:
       - build
       - test
-          #requires:
-           # - build
+        #requires:
+      # - build
       - publish
-          #requires:
-           # - test
+        #requires:
+      # - test
       #https://www.pluralsight.com/guides/create-docker-images-docker-hub
