@@ -16,15 +16,16 @@ jobs:
       - checkout
       - run: echo "this is the build job"
 
-#  test:
-#    executor: exec1
-#    steps:
-#      - checkout
-#      - run:
-#          name: Test
-#          command: mvn test
-#          path: target/surefire-reports
-#      - store_test_results
+  test:
+    executor: exec1
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: mvn clean test
+          path: target/surefire-reports
+      - store_test_results :
+          path: target/surefire-reports
 
   publish:
     executor: exec1
@@ -33,7 +34,7 @@ jobs:
 #     - run:
 #          name: Publish
 #          command:
-#            - docker login
+#            - docker login       #https://www.pluralsight.com/guides/create-docker-images-docker-hub
 #            -
 
 
@@ -41,14 +42,9 @@ workflows:
   build-and-test-workflow:
     jobs:
       - build
-      - maven_test:
-          jobs:
-            - maven/test
-
-      #      - test
-#        requires:
-#       - build
+      - test
+        #requires:
+      # - build
       - publish
-#        requires:
-#       - test
-      #https://www.pluralsight.com/guides/create-docker-images-docker-hub
+        #requires:
+      # - test
