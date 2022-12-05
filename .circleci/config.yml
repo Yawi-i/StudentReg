@@ -19,8 +19,9 @@ jobs:
       - checkout
       - run:
           name: Test
-          command: mvn verify
-#          path: target/surefire-reports
+          command: mvn test
+          path: target/surefire-reports
+      - store_test_results
 
   publish:
     executor: exec1
