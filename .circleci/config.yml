@@ -26,7 +26,7 @@ jobs:
           path: target/surefire-reports
       - store_test_results :
           path: target/surefire-reports
-
+#https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html#running-a-single-test-class
 #  publish:
 #    executor: exec1
 #    steps:
