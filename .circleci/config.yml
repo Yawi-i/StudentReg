@@ -40,7 +40,8 @@ jobs:
 
 workflows:
   build-and-test-workflow:
-    on: pull-request
+    on:
+      - pull-request
     jobs:
       - build
       - test
