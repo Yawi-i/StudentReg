@@ -14,7 +14,7 @@ jobs:
     executor: exec1
     steps:
       - checkout
-      - run: echo "this is the build job"
+      - run: mvn -B -DskipTests clean package
 
   test:
     executor: exec1
@@ -23,7 +23,6 @@ jobs:
       - run:
           name: Test
           command: mvn install
-          path: target/surefire-reports
       - store_test_results :
           path: target/surefire-reports
 #https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html#running-a-single-test-class
