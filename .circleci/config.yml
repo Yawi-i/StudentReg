@@ -7,7 +7,7 @@ orbs:
 executors:
   exec1:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/openjdk:19.0
 
 jobs:
   build:
