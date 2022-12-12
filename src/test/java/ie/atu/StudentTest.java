@@ -60,15 +60,19 @@ public class StudentTest {
     }
 
     @Test
-    void TestEmailPass(){
+    void TestEmailPass() {
         myStudent = new Student("name", "phone", "mail@mail.ie", 0);
+        assertTrue(myStudent.Email() != -1,"Invalid Email");
     }
 
     @Test
-    void TestEmailFail(){
+    void TestEmailFail() {
         myStudent = new Student("name", "phone", "iamasleep.idk", 0);
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    myStudent.Email();
+                });
     }
-
 
     @AfterEach
     void tearDown() {

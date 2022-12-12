@@ -33,8 +33,12 @@ public class Student {
         return studentAge;
     }
 
-    public String Email(){
-
-        return studentemail;
+    public int Email(){
+        int a;
+        a = studentemail.indexOf('@');
+        if (a == -1){
+            throw new IllegalArgumentException("Invalid Email");
+        }
+        return a;
     }
 }
