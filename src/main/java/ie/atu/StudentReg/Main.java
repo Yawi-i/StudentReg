@@ -1,4 +1,4 @@
-package ie.atu;
+package ie.atu.StudentReg;
 
 public class Main {
     public static void main(String[] args)
