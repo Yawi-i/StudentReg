@@ -8,13 +8,13 @@ public class Payment {
     private int due;
     private int fee;
 
-    public Payment(String iban, String bic, String id, int amount, int due, int fee){
+    public Payment(String iban, String bic, String id, int amount, int fee){
         setIban(iban);
         setBic(bic);
         setId(id);
         setAmount(amount);
-        setDue(due);
         setFee(fee);
+        due = 0;
     }
 
 
@@ -27,7 +27,7 @@ public class Payment {
     }
 
     public void setId(String id) {
-            if (String.valueOf(id).length() >= 10) {
+            if (String.valueOf(id).length() == 10) {
                 this.id = id;
             } else {
                 throw new IllegalArgumentException("ID should be a minimum of 10 characters. Please re- enter ID");
@@ -36,7 +36,7 @@ public class Payment {
 
     public void setBic(String bic) {
 
-            if (String.valueOf(bic).length() >= 8) {
+            if (String.valueOf(bic).length() == 8) {
                 this.bic = bic;
             } else {
                 throw new IllegalArgumentException("Invalid BIC entered. BIC should be at least be 8 characters long. Please re- enter BIC.");
@@ -46,7 +46,7 @@ public class Payment {
 
     public void setIban(String iban) {
 
-            if(String.valueOf(iban).length() >= 14){
+            if(String.valueOf(iban).length() == 14){
                 this.iban = iban;
             } else{
                 throw new IllegalArgumentException("Invalid Iban entered. Iban should be at least 18 characters long. Please re- enter IBan");
@@ -58,16 +58,16 @@ public class Payment {
         this.fee = fee;
     }
 
-    public void setDue(int due) {
-        this.due = due;
+    public int getFee() {
+        return fee;
     }
 
     public int getAmount() {
         return amount;
     }
 
-    public int getDue() {
-        due  = amount - fee;
+    public int getDue(int amount, int fee) {
+        due  = fee - amount;
         return due;
     }
 
