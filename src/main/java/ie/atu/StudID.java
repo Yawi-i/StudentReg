@@ -1,34 +1,42 @@
 package ie.atu;
 
 public class StudID {
-    String studentID, studentReg;
+    //String studentID, studentReg;
+    private String ID;
+    private String reg;
+
 
     public StudID(String ID, String reg){      //Constructor
-        studentReg = reg;
-        studentID = ID;
+       // studentReg = reg;
+       // studentID = ID;
+        setreg(reg);
+        setID(ID);
     }
+
+
 
     public void setID(String ID) {
-        if (ID.length() > 6) {
-            studentID = ID;
-        }
-        else{
-            throw new IllegalArgumentException("ID should be 6 numbers or more");
+        if (String.valueOf(ID).length() > 6) {
+            this.ID = ID;
+        } else {
+            throw new IllegalArgumentException("Student ID number should be 8 numbers or more. Please re- enter ID");
         }
     }
 
-
-    public void Reg(String Reg){
-        if (String.valueOf(Reg).length() < 7) {
-            throw new IllegalArgumentException("Registration number should be 8 numbers or more");
+    public void setreg(String reg) {
+        if (String.valueOf(reg).length() > 6) {
+            this.reg = reg;
+        } else {
+            throw new IllegalArgumentException("Registration number should be 8 numbers or more. Please re- enter ID");
         }
     }
+
 
     public String getID(){
-        return studentID;
+        return ID;
     }
 
     public String getReg(){
-        return studentReg;
+        return reg;
     }
 }
