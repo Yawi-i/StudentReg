@@ -1,44 +1,71 @@
 package ie.atu;
 
 public class Student {
-    String studentName, studentPhone, studentemail; int studentAge;
+    private String studentName, studentPhone, studentEmail;
+    private int studentAge;
 
     public Student(String name, String phone, String email, int age){      //Constructor
         studentName = name;
         studentPhone = phone;
-        studentemail = email;
         studentAge = age;
+        studentEmail=email;
     }
 
-    public int Name(){
-        int length = studentName.length();
-        if (length < 2){
-            throw new IllegalArgumentException("Name should be 3 letters or more");
+    public void setName(String Name){
+        int length = Name.length();
+        if (length >= 2){
+            studentName = Name;
         }
-        return length;
+        else {
+            throw new IllegalArgumentException("Name should be 2 letters or more");
+        }
     }
 
-    public int Phone(){
-        int length = studentPhone.length();
-        if (length < 7){
+    public void setPhone(String Phone){
+        int length = Phone.length();
+        if (length == 10){
+            studentPhone = Phone;
+        }
+        else{
             throw new IllegalArgumentException("Phone should be 10 numbers or more");
         }
-        return length;
     }
 
-    public int Age(){
-        if (studentAge < 16){
+    public void setAge(int Age){
+        if (Age >= 16){
+            studentAge = Age;
+        }
+        else
+        {
             throw new IllegalArgumentException("Age must be over 16");
         }
-        return studentAge;
     }
 
-    public int Email(){
+    public void setEmail(String Email){
         int a;
-        a = studentemail.indexOf('@');
-        if (a == -1){
+        a = Email.indexOf('@');
+        if (a != -1){
+           studentEmail = Email;
+        }
+        else
+        {
             throw new IllegalArgumentException("Invalid Email");
         }
-        return a;
     }
+
+    public String getName(){
+        return studentName;
+    }
+    public String getPhone(){
+        return studentPhone;
+    }
+    public int getAge(){
+        return studentAge;
+    }
+    public String getEmail(){
+        return studentEmail;
+    }
+
 }
+
+
