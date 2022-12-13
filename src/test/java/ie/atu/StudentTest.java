@@ -12,68 +12,66 @@ public class StudentTest {
 
     @BeforeEach
     void setUp() {
+        myStudent = new Student(null,null,null,0);
     }
 
     @Test
     void TestNameLength(){
-        myStudent = new Student("Ye", "phone", "mail", 0);
-        assertTrue(myStudent.Name() >=2,"Name should be 2 letters or more");
+      myStudent.setName("Jo");
+      assertTrue(String.valueOf(myStudent.getName()).length() >=2,"Name should be 2 letters or more");
     }
 
     @Test
     void TestNameLengthFail() {
-        myStudent = new Student("Y", "phone", "mail", 0);
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    myStudent.Name();
+                    myStudent.setName("J");
                 });
     }
 
     @Test
     void TestPhoneLength(){
-        myStudent = new Student("name", "0123456789", "mail", 0);
-        assertTrue(myStudent.Phone() >= 7,"Phone should be 7 characters or more");
+        myStudent.setPhone("0123456789");
+        assertTrue(String.valueOf(myStudent.getPhone()).length() >= 7,"Phone should be 10 numbers or more");
     }
 
     @Test
     void TestPhoneLengthFail(){
-        myStudent = new Student("name", "1234", "mail", 0);
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    myStudent.Phone();
+                    myStudent.setPhone("012345678");
                 });
     }
 
     @Test
     void TestAgePass() {
-        myStudent = new Student("name", "phone", "mail", 16);
-        assertTrue(myStudent.Age() >= 16, "Age must be over 16");
+        myStudent.setAge(16);
+        assertTrue(myStudent.getAge() >= 16, "Age must be over 16");
     }
 
     @Test
     void TestAgeFail() {
-        myStudent = new Student("name", "phone", "mail", 0);
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    myStudent.Age();
+                    myStudent.setAge(15);
                 });
     }
-
+/*
     @Test
     void TestEmailPass() {
-        myStudent = new Student("name", "phone", "mail@mail.ie", 0);
-        assertTrue(myStudent.Email() != -1,"Invalid Email");
+        myStudent.setEmail("mail@mail.com");
+        int a = myStudent.getEmail().indexOf('@');
+        assertTrue(a != -1,"Invalid Email");
     }
 
     @Test
     void TestEmailFail() {
-        myStudent = new Student("name", "phone", "iamasleep.idk", 0);
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    myStudent.Email();
+                    myStudent.setEmail("mail.com");
                 });
     }
-
+*/
     @AfterEach
     void tearDown() {
     }
