@@ -16,18 +16,18 @@ public class StudID {
 
 
     public void setID(String ID) {
-        if (String.valueOf(ID).length() > 6) {
+        if (String.valueOf(ID).length() > 7) {
             this.ID = ID;
         } else {
-            throw new IllegalArgumentException("Student ID number should be 8 numbers or more. Please re- enter ID");
+            throw new IllegalArgumentException("Student ID number should be 8 numbers long. Please re- enter ID");
         }
     }
 
     public void setreg(String reg) {
-        if (String.valueOf(reg).length() > 6) {
+        if (String.valueOf(reg).length() > 8) {
             this.reg = reg;
         } else {
-            throw new IllegalArgumentException("Registration number should be 8 numbers or more. Please re- enter ID");
+            throw new IllegalArgumentException("Registration number should be 9 numbers long. Please re- enter ID");
         }
     }
 
