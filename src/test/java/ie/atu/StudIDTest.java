@@ -37,8 +37,8 @@ public class StudIDTest {
                 () -> {
                     myStudID.setID("45678");
                 });
-    }
+    }*/
     @AfterEach
     void tearDown() {
-    }*/
+    }
 }
