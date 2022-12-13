@@ -3,8 +3,10 @@ package ie.atu.StudentReg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -17,14 +19,17 @@ public class StudentRegApplication {
 		SpringApplication.run(StudentRegApplication.class, args);
 	}
 
-	@GetMapping
+	@GetMapping("api/students")
 	public List<Student> getStudents()
 	{
-		List<Student>myStudents = List.of(
-			new Student("John","0123456789","mail@mail.com",16),
-			new Student("Joe","0123456789","mail1@mail.com",18),
-			new Student("Johnson","0123456789","mail2@mail.com",21));
-	return myStudents;
+		StudentService myService =  new StudentService();
+		return myService.getStudents();
+	}
+	@GetMapping("")
+	public Student getStudents(@PathVariable String studentName){
+		Student found = new Student("Yael","0123456789","yael@mail.com",19);
+		return found;
+
 	}
 }
 

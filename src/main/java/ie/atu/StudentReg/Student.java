@@ -1,14 +1,17 @@
 package ie.atu.StudentReg;
 
-public class Student {
-    String studentName, studentPhone, studentemail; int studentAge;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    public Student(String name, String phone, String email, int age){      //Constructor
-        studentName = name;
-        studentPhone = phone;
-        studentemail = email;
-        studentAge = age;
-    }
+@AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+
+public class Student {
+    private String studentName, studentPhone, studentemail; int studentAge;
 
     public int Name(){
         int length = studentName.length();
