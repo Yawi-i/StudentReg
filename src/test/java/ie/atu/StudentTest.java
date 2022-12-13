@@ -56,7 +56,7 @@ public class StudentTest {
                     myStudent.setAge(15);
                 });
     }
-/*
+
     @Test
     void TestEmailPass() {
         myStudent.setEmail("mail@mail.com");
@@ -71,7 +71,7 @@ public class StudentTest {
                     myStudent.setEmail("mail.com");
                 });
     }
-*/
+
     @AfterEach
     void tearDown() {
     }
