@@ -39,7 +39,7 @@ public class StudentTest {
     void TestPhoneLengthFail(){
         assertThrows(IllegalArgumentException.class,
                 () -> {
-                    myStudent.setPhone("012345687");
+                    myStudent.setPhone("012345678");
                 });
     }
 
